@@ -52,6 +52,13 @@ async def main() -> None:
     )
     #
     parser.add_argument("--output-dir", help="Path to save audio and detections")
+
+    parser.add_argument(
+        "--vad-threshold",
+        type=float,
+        default=0,
+        help="Use Silero VAD model to filter predictions when greater than 0 (default: 0)",
+    )
     #
     parser.add_argument("--debug", action="store_true", help="Log DEBUG messages")
     parser.add_argument(

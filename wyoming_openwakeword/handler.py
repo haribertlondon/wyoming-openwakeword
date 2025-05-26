@@ -183,7 +183,7 @@ class OpenWakeWordEventHandler(AsyncEventHandler):
         return Info(
             wake=[
                 WakeProgram(
-                    name="openwakeword",
+                    name="openwakewordext",
                     description="An open-source audio wake word (or phrase) detection framework with a focus on performance and simplicity.",
                     attribution=Attribution(
                         name="dscripka", url="https://github.com/dscripka/openWakeWord"
