@@ -13,7 +13,6 @@ from .handler import OpenWakeWordEventHandler, ensure_loaded
 from .openwakeword import embeddings_proc, mels_proc
 from .state import State
 
-logging.basicConfig(level=logging.DEBUG)
 _LOGGER = logging.getLogger()
 _DIR = Path(__file__).parent
 
@@ -111,6 +110,7 @@ async def main() -> None:
     embeddings_thread = Thread(target=embeddings_proc, daemon=True, args=(state,))
     embeddings_thread.start()
     _LOGGER.info("Ready haribertlondon")
+    _LOGGER.debug("Ready haribertlondon Debug")
 
     # Start server
     server = AsyncServer.from_uri(args.uri)

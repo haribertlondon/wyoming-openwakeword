@@ -28,8 +28,12 @@ script/run --uri 'tcp://0.0.0.0:10400'
 
 See `script/run --help` for more options, including:
 
+* `--threshold [0-1]` - default is 0.5, increase to avoid false activations
 * `--custom-model-dir <DIR>` - look for custom wake word models in `<DIR>`
 * `--debug` - print lots of information to console
+* `--debug-probability` - Log all wake word probabilities (VERY noisy)
+* `--vad-threshold [0-1]` - default is 0, use [Silero VAD](https://github.com/snakers4/silero-vad) to filter predictions
+* `--output-dir` - Path to save audio and detections
 
 
 ## Docker Image
