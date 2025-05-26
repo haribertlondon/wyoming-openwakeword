@@ -110,7 +110,7 @@ async def main() -> None:
     # mels -> embeddings
     embeddings_thread = Thread(target=embeddings_proc, daemon=True, args=(state,))
     embeddings_thread.start()
-    _LOGGER.info("Ready")
+    _LOGGER.info("Ready haribertlondon")
 
     # Start server
     server = AsyncServer.from_uri(args.uri)
