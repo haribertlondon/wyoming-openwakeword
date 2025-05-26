@@ -32,6 +32,7 @@ See `script/run --help` for more options, including:
 * `--custom-model-dir <DIR>` - look for custom wake word models in `<DIR>`
 * `--debug` - print lots of information to console
 * `--debug-probability` - Log all wake word probabilities (VERY noisy)
+* `--debug-probability-threshold` - Log all wake word probabilities above this threshold (reduce noise of --debug-probability)
 * `--output-dir` - Path to save audio and detections
 * `--vad-threshold [0-1]` - default is 0, use [Silero VAD](https://github.com/snakers4/silero-vad) to filter predictions
 

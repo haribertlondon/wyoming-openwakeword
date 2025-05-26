@@ -59,6 +59,13 @@ async def main() -> None:
         default=0,
         help="Use Silero VAD model to filter predictions when greater than 0 (default: 0)",
     )
+
+    parser.add_argument(
+        "--debug-probability-threshold",
+        type=float,
+        default=0,
+        help="Log all wake word probabilities above this threshold (reduce noise of --debug-probability)",
+    )
     #
     parser.add_argument("--debug", action="store_true", help="Log DEBUG messages")
     parser.add_argument(
@@ -98,6 +105,7 @@ async def main() -> None:
         models_dir=Path(args.models_dir),
         custom_model_dirs=[Path(d) for d in args.custom_model_dir],
         debug_probability=args.debug_probability,
+        debug_probability_threshold=args.debug_probability_threshold,
         output_dir=args.output_dir,
     )
 

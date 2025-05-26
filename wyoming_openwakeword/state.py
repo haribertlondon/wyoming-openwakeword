@@ -40,4 +40,5 @@ class State:
     wake_word_aliases: Dict[str, str] = field(default_factory=dict)
 
     debug_probability: bool = False
+    debug_probability_threshold: float = 0
     output_dir: Optional[Path] = None

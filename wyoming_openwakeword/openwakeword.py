@@ -323,12 +323,13 @@ def ww_proc(
                             continue
 
                         if state.debug_probability:
-                            _LOGGER.debug(
-                                "client=%s, wake_word=%s, probability=%s",
-                                client_id,
-                                ww_model_key,
-                                probability.item(),
-                            )
+                            if probability.item() > state.debug_probability_threshold:
+                                _LOGGER.debug(
+                                    "client=%s, wake_word=%s, probability=%s",
+                                    client_id,
+                                    ww_model_key,
+                                    probability.item(),
+                                )
 
                         prob_file: Optional[TextIO] = None
                         if (state.output_dir is not None) and state.debug_probability:
