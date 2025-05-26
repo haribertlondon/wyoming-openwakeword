@@ -13,8 +13,10 @@ from .handler import OpenWakeWordEventHandler, ensure_loaded
 from .openwakeword import embeddings_proc, mels_proc
 from .state import State
 
+logging.basicConfig(level=logging.DEBUG)
 _LOGGER = logging.getLogger()
 _DIR = Path(__file__).parent
+
 
 
 async def main() -> None:
