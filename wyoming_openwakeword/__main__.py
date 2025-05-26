@@ -90,7 +90,7 @@ async def main() -> None:
     if args.output_dir:
         # Directory to save audio clips and chunk probabilities
         args.output_dir = Path(args.output_dir)
-        args.output_dir.mkdir(parents=True, exist_ok=True)
+        #args.output_dir.mkdir(parents=True, exist_ok=True)
         _LOGGER.info("Audio will be saved to %s", args.output_dir)
 
     # Resolve wake word model paths
